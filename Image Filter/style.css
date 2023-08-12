@@ -1,0 +1,109 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color) !important;
+}
+
+/* :root {
+  --bg-color: #f2f2f2 ;
+  --second-bg-color: #fff;
+  --text-color: #0000;
+  --hover:#ddd;
+  --main-color: #14A44D;
+} */
+
+/* pink shades */
+:root {
+  --bg-color: #e75874 ;
+  --second-bg-color: #be1558;
+  --text-color: #fff;
+  --hover:#fbcbc9;
+  --main-color: #322514;
+}
+
+/* , , , #ced7d8 */
+:root {
+  --bg-color: #7fe7dc ;
+  --bg-color: #3cb7aa ;
+  --second-bg-color: #316879;
+  --text-color: #fff;
+  --hover:#ced7d8;
+  --main-color: #f47a60;
+}
+
+
+
+body {
+  /* background: #f1f1f1 !important; */
+  /* background: var(--bg-color) !important; */
+  /* background: linear-gradient(#fbcbc9,#e75874, #be1558) !important; */
+  /* background: linear-gradient(#e75874,#fbcbc9, #be1558) !important; */
+  background: linear-gradient(#7fe7dc,#ced7d8,#316879) !important;
+  background: linear-gradient(#316879,#f47a60,#316879) !important;
+}
+
+
+body .container {
+  max-width: 1100px;
+}
+body .container .card{
+  /* background: var(--hover); */
+  background: var(--bg-color);
+}
+
+#filter-buttons button {
+  border-radius: 3px;
+  /* background: #fff; */
+  background: var(--second-bg-color);
+  border-color: transparent;
+}
+
+#filter-buttons button:hover {
+  /* background: #ddd; */
+  background: var(--hover);
+}
+
+#filter-buttons button.active {
+  /* color: #fff; */
+  color: var(--second-bg-color);
+  background: rgb( 13, 110, 253 );
+  background: #14A44D;
+  background: var(--main-color);
+}
+
+#filterable-cards .card {
+  width: 15rem;
+  border: 2px solid transparent;
+}
+
+#filterable-cards .card.hide {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #filterable-cards {
+    justify-content: center;
+  }
+
+  #filterable-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+h6{
+  text-align: center;
+}
+button, h6{
+  color: var(--text-color);
+}
